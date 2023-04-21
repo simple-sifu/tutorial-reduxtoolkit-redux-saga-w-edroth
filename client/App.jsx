@@ -15,7 +15,31 @@ function App() {
   
   return (
     <div className='app'>
-      <h1>Hello World</h1>
+      <h1>CAT SPECIES GALLERY</h1>
+      <p>Image of different species of cats. Lots of cats for your viewing pleasure.</p>
+      <hr /> 
+      <div className="Gallery">
+        {
+          cats.map( 
+            cat => 
+            <div key={cat.id} className="row">
+              <div className="column column-left">
+                <img 
+                  alt={cat.name} 
+                  src={cat.cfa_url} 
+                  width="200" 
+                  height="200" 
+                />  
+              </div>
+              <div className="column column-right">
+                <h2>{cat.name}</h2>
+                <h5>Temperament: {cat.temperament}</h5>
+                <p>{cat.description}</p>
+              </div>
+            </div>
+          )
+        }
+      </div>
     </div>
   );
 }
