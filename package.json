@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --config=webpack.config.dev.js",
     "build-prod": "webpack --config=webpack.config.prod.js",
-    "start": "concurrently \"nodemon ./server/server\" \"webpack-dev-server --config=webpack.config.dev.js\"",
+    "start": "webpack-dev-server --config=webpack.config.dev.js",
     "server": "nodemon ./server/server",
     "test": "jest --watch",
     "start_old": "NODE_ENV=Production node ./server/server",

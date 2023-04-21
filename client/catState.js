@@ -10,7 +10,7 @@ export const catSlice = createSlice({
         getCatsFetch: (state) => {
             state.isLoading = true;
         },
-        getCatSuccess: (state,action) => {
+        getCatsSuccess: (state,action) => {
             state.cats = action.payload;
             state.isLoading = false;
         },
@@ -21,4 +21,5 @@ export const catSlice = createSlice({
     }
 })
 
-export const { getCatsFetch, getCatsSuccess, getCatsFailure } = catState.actions
+ export const { getCatsFetch, getCatsSuccess, getCatsFailure } = catSlice.actions
+ export default catSlice.reducer;
